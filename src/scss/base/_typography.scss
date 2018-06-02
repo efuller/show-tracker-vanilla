@@ -1,0 +1,36 @@
+//--------------------------------------------------------------
+// Typography
+//--------------------------------------------------------------
+body {
+	font-family: $font-sans;
+}
+
+@for $i from 1 through 6 {
+	h#{$i},
+	.h#{$i} {
+		font-family: $font-serif;
+	}
+}
+
+h1,
+.h1 {
+	font-size: 36px;
+}
+
+h2,
+.h2 {
+	font-size: 30px;
+}
+
+h3,
+.h3 {
+	font-size: 24px;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}

@@ -1,0 +1,44 @@
+Arguments: 
+  /Users/efuller/.nvm/versions/node/v9.3.0/bin/node /usr/local/Cellar/yarn/1.3.2/libexec/bin/yarn.js add --dev webpack wepback-cli
+
+PATH: 
+  /Users/efuller/.nvm/versions/node/v9.3.0/bin:/Users/efuller/Utilities/phpcs/bin:/usr/local/Cellar/mongodb/3.0.2/bin/mongod:~/.composer/vendor/bin:/usr/local/sbin:~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  9.3.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "show-tracker-vanilla",
+    "version": "0.1.0",
+    "description": "Find and track your favorite TV shows.",
+    "main": "index.js",
+    "repository": "git@github.com:efuller/show-tracker-vanilla.git",
+    "author": "Eric Fuller <info@glassmoonmedia.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/wepback-cli: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.3.2/libexec/lib/cli.js:62098:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.3.2/libexec/lib/cli.js:123085:22)
+      at Request.emit (events.js:159:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.3.2/libexec/lib/cli.js:124068:10)
+      at Request.emit (events.js:159:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.3.2/libexec/lib/cli.js:123988:12)
+      at Object.onceWrapper (events.js:254:19)
+      at IncomingMessage.emit (events.js:164:20)
+      at endReadableNT (_stream_readable.js:1062:12)
+      at process._tickCallback (internal/process/next_tick.js:152:19)

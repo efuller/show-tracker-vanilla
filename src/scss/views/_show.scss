@@ -1,0 +1,37 @@
+//--------------------------------------------------------------
+// Show Details
+//--------------------------------------------------------------
+.show {
+	background-color: rgba($color-gray-dark, 1);
+	bottom: 0;
+	display: none;
+	left: 0;
+	padding-top: 100px;
+	position: fixed;
+	right: 0;
+	top: 0;
+
+	&__grid {
+
+		@media screen and (min-width: 600px) {
+			display: flex;
+		}
+	}
+
+	&__left {
+		flex: 1 0 400px;
+		margin-right: 15px;
+	}
+
+
+	&__close {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+	}
+
+	&__title,
+	&__description {
+		color: $color-white;
+	}
+}

@@ -1,0 +1,25 @@
+//--------------------------------------------------------------
+// Layout
+//--------------------------------------------------------------
+.container {
+	margin: 0 auto;
+	max-width: 1120px;
+	padding: 0 15px;
+
+	@media screen and (min-width: 1200px) {
+		padding: 0;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.results__grid {
+
+	@media screen and (min-width: 600px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}

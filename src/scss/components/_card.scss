@@ -1,0 +1,27 @@
+//--------------------------------------------------------------
+// Cards
+//--------------------------------------------------------------
+.card {
+	box-shadow: 0 0 2px rgba($color-black, 0.5);
+	display: flex;
+	flex: 0 0 48%;
+	height: 300px;
+	margin-bottom: 30px;
+	width: 48%;
+
+	&__right {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+	}
+
+	&__image-container {
+		display: flex;
+		width: 200px;
+	}
+
+	&__image {
+		//height: 100%;
+		//width: 100%;
+	}
+}
