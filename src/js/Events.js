@@ -9,9 +9,9 @@ class Events {
 			this.events[event] = [cb];
 		}
 	}
-	emit(event) {
+	emit(event, data) {
 		if (this.events[event]) {
-			this.events[event].forEach(cb => cb());
+			this.events[event].forEach(cb => cb(data));
 		}
 	}
 	off(event) {

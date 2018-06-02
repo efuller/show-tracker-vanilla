@@ -35,7 +35,18 @@ test('Events.emit() should call all callbacks for specified event', () => {
 
 	Events.emit('start');
 	expect(cb).toHaveBeenCalledTimes(1);
+	expect(cb2).toHaveBeenCalledTimes(1);
+});
+
+test('Events.emit(start, data) should call all callbacks for specified event and the data passed.', () => {
+	let cb = jest.fn();
+	const data = { name: 'Events' };
+
+	Events.on('start', cb);
+
+	Events.emit('start', data);
 	expect(cb).toHaveBeenCalledTimes(1);
+	expect(cb).toHaveBeenCalledWith(data);
 });
 
 test('Events.off() should remove an event and all its callbacks', () => {
