@@ -11,6 +11,16 @@
     "build": "webpack",
     "test": "jest --watchAll"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "hbs"
+    ],
+    "transform": {
+      "\\.js$": "babel-jest",
+      "\\.hbs$": "<rootDir>/config/preprocessor.js"
+    }
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -25,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "file-loader": "^1.1.11",
+    "handlebars": "^4.0.11",
     "handlebars-loader": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-template": "^6.2.0",
