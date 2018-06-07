@@ -39,3 +39,15 @@ test('expect app.init to throw if no routes were registered', () => {
 
 	expect(() => app.init()).toThrowError(/^There are no registered routes.$/);
 })
+
+test('If route registered, router.load() should be called', () => {
+	const app = new App();
+	const loadFn = jest.fn();
+
+	app.router.load = loadFn;
+	app.route('#', () => {});
+	app.init();
+
+	expect(loadFn).toHaveBeenCalledTimes(1);
+});
+
