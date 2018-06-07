@@ -9,12 +9,18 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "test": "jest --watchAll"
+    "test": "jest --colors --watchAll",
+    "test:coverage": "jest --coverage --collectCoverageFrom=src/**/*.{js,jsx}"
   },
   "jest": {
+    "verbose": true,
     "moduleFileExtensions": [
       "js",
       "hbs"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/src/index.js"
     ],
     "transform": {
       "\\.js$": "babel-jest",
