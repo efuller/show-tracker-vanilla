@@ -2,7 +2,7 @@ import Main from '../views/main.hbs';
 import Loading from '../views/partials/loading.hbs';
 import View from './View';
 
-const Conroller = {
+const Controller = {
 	home: () => {
 		const loading = new View(Loading);
 		loading.render('#app');
@@ -16,4 +16,4 @@ const Conroller = {
 	},
 };
 
-export default Conroller;
+export default Controller;
