@@ -3,7 +3,7 @@ import Loading from '../views/partials/loading.hbs';
 import View from './View';
 
 const Conroller = {
-	test: () => {
+	home: () => {
 		const loading = new View(Loading);
 		loading.render('#app');
 		return new Promise((resolve) => {

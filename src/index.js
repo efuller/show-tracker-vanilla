@@ -5,6 +5,6 @@ import App from './App';
 
 window.onload = function() {
 	const app = new App();
-	app.route('#', Controller.test);
+	app.route('#', Controller.home);
 	app.init();
 };
