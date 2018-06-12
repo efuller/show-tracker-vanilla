@@ -4,15 +4,8 @@ import View from './View';
 
 const Controller = {
 	home: () => {
-		const loading = new View(Loading);
-		loading.render('#app');
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				const view = new View(Main);
-				view.render('#app');
-				resolve();
-			}, 2000);
-		});
+		const view = new View(Main);
+		view.render('#app');
 	},
 };
 
