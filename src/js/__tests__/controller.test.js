@@ -20,8 +20,6 @@ test('Controller.home() should render loading', () => {
 	const expectedHomeTmpl = `<div class="page">
 	{{> header}}
 	{{> searchForm}}
-	{{> results}}
-	{{> showDetails}}
 </div>
 `;
 
