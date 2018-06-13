@@ -1,6 +1,6 @@
 import 'minireset.css';
 import './scss/index.scss';
-import Controller from './js/Controller';
+import Controller from './components/Controller';
 import App from './App';
 
 window.onload = function () {

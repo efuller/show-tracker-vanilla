@@ -1,11 +1,11 @@
 // https://stackoverflow.com/q/47661741
-
 import Controller from '../Controller';
-import View from '../View';
+import HomeView from '../HomeView';
 const mockRender = jest.fn();
-jest.mock('../View', () => {
+const mockBindEvents = jest.fn();
+jest.mock('../HomeView', () => {
 	return jest.fn().mockImplementation((template) => {
-		return { view: template, render: mockRender };
+		return { view: template, render: mockRender, bindEvents: mockBindEvents };
 	});
 });
 
@@ -27,7 +27,11 @@ test('Controller.home() should render loading', () => {
 
 	//console.log(View.mock.results); // important!!
 
-	expect(View.mock.results[0].value.view).toEqual(expectedHomeTmpl);
-	expect(View.mock.calls[0][0]).toEqual(expectedHomeTmpl);
+	expect(HomeView.mock.results[0].value.view).toEqual(expectedHomeTmpl);
+	expect(HomeView.mock.calls[0][0]).toEqual(expectedHomeTmpl);
 	expect(mockRender.mock.calls[0][0]).toEqual('#app');
 });
+
+test('Controller.getSearchResults gets and render data', () => {
+
+})

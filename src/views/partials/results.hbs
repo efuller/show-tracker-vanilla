@@ -1,126 +1,28 @@
 <div class="results">
 	<div class="container">
 		<div class="results__grid">
-			<div class="card">
-				<div class="card__left">
-					<figure class="card__image-container">
-						<img class="card__image" src="http://unsplash.it/300/300" alt="Show Image">
-					</figure>
-				</div>
-				<div class="card__right">
-					<header class="card__header">
-						<h3 class="card__title">
-							<a href="#" class="card__link">Show Title One</a>
-						</h3>
-					</header>
-					<div class="card__content">
-						<p class="card__description">Here is the description</p>
+			{{#each data}}
+				<div class="card">
+					<div class="card__left">
+						<figure class="card__image-container">
+							<img class="card__image" src="https://image.tmdb.org/t/p/w185{{poster_path}}" alt="Show Image">
+						</figure>
 					</div>
-					<footer class="card__footer">
-						<a href="#">more details</a>
-					</footer>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card__left">
-					<figure class="card__image-container">
-						<img class="card__image" src="http://unsplash.it/300/300" alt="Show Image">
-					</figure>
-				</div>
-				<div class="card__right">
-					<header class="card__header">
-						<h3 class="card__title">
-							<a href="#" class="card__link">Show Title One</a>
-						</h3>
-					</header>
-					<div class="card__content">
-						<p class="card__description">Here is the description</p>
+					<div class="card__right">
+						<header class="card__header">
+							<h3 class="card__title">
+								<a href="#" class="card__link">{{name}}</a>
+							</h3>
+						</header>
+						<div class="card__content">
+							<p class="card__description">{{overview}}</p>
+						</div>
+						<footer class="card__footer">
+							<a href="#">more details</a>
+						</footer>
 					</div>
-					<footer class="card__footer">
-						<a href="#">more details</a>
-					</footer>
 				</div>
-			</div>
-			<div class="card">
-				<div class="card__left">
-					<figure class="card__image-container">
-						<img class="card__image" src="http://unsplash.it/300/300" alt="Show Image">
-					</figure>
-				</div>
-				<div class="card__right">
-					<header class="card__header">
-						<h3 class="card__title">
-							<a href="#" class="card__link">Show Title One</a>
-						</h3>
-					</header>
-					<div class="card__content">
-						<p class="card__description">Here is the description</p>
-					</div>
-					<footer class="card__footer">
-						<a href="#">more details</a>
-					</footer>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card__left">
-					<figure class="card__image-container">
-						<img class="card__image" src="http://unsplash.it/300/300" alt="Show Image">
-					</figure>
-				</div>
-				<div class="card__right">
-					<header class="card__header">
-						<h3 class="card__title">
-							<a href="#" class="card__link">Show Title One</a>
-						</h3>
-					</header>
-					<div class="card__content">
-						<p class="card__description">Here is the description</p>
-					</div>
-					<footer class="card__footer">
-						<a href="#">more details</a>
-					</footer>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card__left">
-					<figure class="card__image-container">
-						<img class="card__image" src="http://unsplash.it/300/300" alt="Show Image">
-					</figure>
-				</div>
-				<div class="card__right">
-					<header class="card__header">
-						<h3 class="card__title">
-							<a href="#" class="card__link">Show Title One</a>
-						</h3>
-					</header>
-					<div class="card__content">
-						<p class="card__description">Here is the description</p>
-					</div>
-					<footer class="card__footer">
-						<a href="#">more details</a>
-					</footer>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card__left">
-					<figure class="card__image-container">
-						<img class="card__image" src="http://unsplash.it/300/300" alt="Show Image">
-					</figure>
-				</div>
-				<div class="card__right">
-					<header class="card__header">
-						<h3 class="card__title">
-							<a href="#" class="card__link">Show Title One</a>
-						</h3>
-					</header>
-					<div class="card__content">
-						<p class="card__description">Here is the description</p>
-					</div>
-					<footer class="card__footer">
-						<a href="#">more details</a>
-					</footer>
-				</div>
-			</div>
+			{{/each}}
 		</div>
 	</div>
 </div>
