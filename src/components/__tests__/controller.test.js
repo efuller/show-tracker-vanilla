@@ -1,5 +1,5 @@
 // https://stackoverflow.com/q/47661741
-import Controller from '../Controller';
+import { home } from '../Controller';
 import HomeView from '../HomeView';
 const mockRender = jest.fn();
 const mockBindEvents = jest.fn();
@@ -23,7 +23,7 @@ test('Controller.home() should render loading', () => {
 </div>
 `;
 
-	Controller.home();
+	home();
 
 	//console.log(View.mock.results); // important!!
 

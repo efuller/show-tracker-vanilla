@@ -1,5 +1,5 @@
 import View from '../js/View';
-import Controller from './Controller';
+import { getSearchResults } from './Controller';
 
 class HomeView extends View {
 	bindEvents() {
@@ -12,7 +12,7 @@ class HomeView extends View {
 			if (!value) {
 				return;
 			}
-			Controller.getSearchResults(value.trim());
+			getSearchResults(value.trim());
 		});
 	}
 }
