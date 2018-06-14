@@ -6,7 +6,9 @@ class View {
 	render() {
 		const appEl = document.querySelector(this.selector);
 		appEl.innerHTML = this.view;
+		this.bindEvents();
 	}
+	bindEvents() {}
 }
 
 export default View;
