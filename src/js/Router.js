@@ -33,9 +33,9 @@ class Router {
 
 		// Load the # route as a fail safe.
 		if (matched) {
-			matched.cb(this);
+			matched.view.render();
 		} else {
-			home.cb(this);
+			home.view.render();
 		}
 	}
 
@@ -53,10 +53,10 @@ class Router {
 		});
 	}
 
-	register(route, cb) {
+	register(route, view) {
 		const newRoute = {
 			name: route,
-			cb,
+			view,
 		}
 
 		this.routes.push(newRoute);

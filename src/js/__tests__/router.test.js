@@ -1,4 +1,7 @@
 import Router from '../Router';
+import View from '../View';
+
+jest.mock('../View');
 
 test('should new-up a Router class', () => {
 	const router = new Router();
@@ -6,48 +9,57 @@ test('should new-up a Router class', () => {
 });
 
 test('register(): should register new route', () => {
-	const cb = jest.fn();
+	const selector = '#app';
+	const template = jest.fn();
+	const data = {};
+	const view = new View(selector, template, data);
 	const route = {
 		name: '#',
-		cb,
+		view,
 	};
 
 	const router = new Router();
-	router.register('#', cb);
+	router.register('#', view);
 	expect(router.routes[0]).toMatchObject(route);
 });
 
 test('match(): should return a matched router', () => {
-	const cb = jest.fn();
+	const selector = '#app';
+	const template = jest.fn();
+	const data = {};
+	const view = new View(selector, template, data);
+
 	const home = {
 		name: '#',
-		cb,
+		view,
 	};
 
 	const projects = {
 		name: '#projects',
-		cb,
+		view,
 	};
 
 	const router = new Router();
-	router.register('#', cb);
-	router.register('#projects', cb);
+	router.register('#', view);
+	router.register('#projects', view);
 
 	expect(router.match('#')).toMatchObject(home);
 	expect(router.match('#projects')).toMatchObject(projects);
 });
 
 test('load() should load a matching route', () => {
-	const cb1 = jest.fn();
-	const cb2 = jest.fn();
+	const selector = '#app';
+	const template = jest.fn();
+	const data = {};
+	const view = new View(selector, template, data);
 	const router = new Router();
 
-	router.register('#', cb1);
-	router.register('#projects', cb2);
+	router.register('#', view);
+	router.register('#projects', view);
 
 	router.load();
-	expect(cb1).toHaveBeenCalledTimes(1);
-	expect(cb2).toHaveBeenCalledTimes(0);
+	expect(view.render).toHaveBeenCalledTimes(1);
+	expect(view.render).toHaveBeenCalledTimes(1);
 });
 
 test('load(): should throw an error if no routes are registered', () => {
@@ -64,15 +76,18 @@ test('load(): should throw an error if no home route is registered', () => {
 });
 
 test('load(): load the home route if there are no other matches', () => {
-	const cb = jest.fn();
+	const selector = '#app';
+	const template = jest.fn();
+	const data = {};
+	const view = new View(selector, template, data);
 	const router = new Router();
-	router.register('#', cb);
+	router.register('#', view);
 	router.register('#projects', () => {});
 
 	router.load();
-	expect(cb).toHaveBeenCalledTimes(1);
+	expect(view.render).toHaveBeenCalledTimes(1);
 	router.load('#something');
-	expect(cb).toHaveBeenCalledTimes(2);
+	expect(view.render).toHaveBeenCalledTimes(2);
 });
 
 test('active(): add a class of .active to the active menu item', () => {

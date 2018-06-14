@@ -1,9 +1,10 @@
 class View {
-	constructor(template, data) {
+	constructor(selector, template, data) {
+		this.selector = selector;
 		this.view = template({ data });
 	}
-	render(el) {
-		const appEl = document.querySelector(el);
+	render() {
+		const appEl = document.querySelector(this.selector);
 		appEl.innerHTML = this.view;
 	}
 }
