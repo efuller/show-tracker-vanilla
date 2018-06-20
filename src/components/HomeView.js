@@ -1,5 +1,7 @@
 import View from '../js/View';
-import { getSearchResults } from './Controller';
+import { getShows } from '../API';
+import Results from '../views/partials/results.hbs';
+import SearchResults from './SearchResultsView';
 
 class HomeView extends View {
 	bindEvents() {
@@ -12,8 +14,16 @@ class HomeView extends View {
 			if (!value) {
 				return;
 			}
-			getSearchResults(value.trim());
+			this.renderSearchResults(value.trim());
 		});
+	}
+	renderSearchResults(show) {
+		getShows(show)
+			.then((res) => {
+				const shows = res.data.results || [];
+				const view = new SearchResults('#search-results', Results, shows);
+			})
+			.catch(err => console.error(err));
 	}
 }
 
