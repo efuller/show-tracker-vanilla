@@ -7,11 +7,11 @@
       "original_name": "Homeland",
       "id": 1407,
       "name": "Homeland",
-      "vote_count": 865,
-      "vote_average": 7.3,
+      "vote_count": 874,
+      "vote_average": 7.37,
       "poster_path": "/lT8o38ubu9uzcjZbkDtwsVizDeQ.jpg",
       "first_air_date": "2011-10-02",
-      "popularity":  36.504512, 
+      "popularity": 37.197561,
       "genre_ids": [
         18
       ],
@@ -30,7 +30,7 @@
       "vote_average": 0,
       "poster_path": null,
       "first_air_date": "2004-04-11",
-      "popularity": 1.011581,
+      "popularity": 1.086971,
       "genre_ids": [
         18
       ],
@@ -49,7 +49,7 @@
       "vote_average": 0,
       "poster_path": null,
       "first_air_date": "2009-01-06",
-      "popularity": 1.048702,
+      "popularity": 1.575975,
       "genre_ids": [
         99
       ],

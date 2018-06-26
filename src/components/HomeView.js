@@ -22,6 +22,7 @@ class HomeView extends View {
 			.then((res) => {
 				const shows = res.data.results || [];
 				const view = new SearchResults('#search-results', Results, shows);
+                view.show();
 			})
 			.catch(err => console.error(err));
 	}

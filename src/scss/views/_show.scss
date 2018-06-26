@@ -1,10 +1,13 @@
 //--------------------------------------------------------------
 // Show Details
 //--------------------------------------------------------------
+#search-results {
+	display: none;
+}
+
 .show {
 	background-color: rgba($color-gray-dark, 1);
 	bottom: 0;
-	display: none;
 	left: 0;
 	padding-top: 100px;
 	position: fixed;

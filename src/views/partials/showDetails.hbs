@@ -4,16 +4,12 @@
 		<div class="show__grid">
 			<div class="show__left">
 				<figure class="show__image-container">
-					<img src="http://unsplash.it/400/500" alt="Show" class="show__image">
+					<img src="http://image.tmdb.org/t/p/w185{{data.poster_path}}" alt="Show" class="show__image">
 				</figure>
 			</div>
 			<div class="show__right">
-				<h2 class="show__title">Here is the show title</h2>
-				<p class="show__description">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Aperiam corporis cumque deleniti et ex id ipsam laborum, maiores minus molestias neque optio,
-					praesentium reiciendis repellat repudiandae saepe tempora temporibus ullam?
-				</p>
+				<h2 class="show__title">{{data.name}}</h2>
+				<p class="show__description">{{data.overview}}</p>
 			</div>
 		</div>
 	</div>
