@@ -7,7 +7,7 @@ class App {
 		};
 
 		this.router = new Router();
-		this.config = Object.assign(defaultConfig, config, {});
+		this.config = Object.assign( defaultConfig, config, {});
 	}
 
 	route(name, cb) {

@@ -37,6 +37,19 @@
     "en"
   ],
   "last_air_date": "2018-04-29",
+	"last_episode_to_air": Object {
+		 "air_date": "2018-04-29",
+		 "episode_number": 12,
+		 "id": 1457182,
+		 "name": "Paean To The People",
+		 "overview": "Carrie and Saul's mission doesn't go as planned. Elizabeth Keane fights for her presidency. Season finale.",
+		 "production_code": null,
+		 "season_number": 7,
+		 "show_id": 1407,
+		 "still_path": "/5pTD1kmLP7OG59JoLAWAKfwChUQ.jpg",
+		 "vote_average": 6,
+		 "vote_count": 1,
+	 },
   "name": "Homeland",
   "networks": [
     {
@@ -46,6 +59,7 @@
       "origin_country": "US"
     }
   ],
+	"next_episode_to_air": null,
   "number_of_episodes": 84,
   "number_of_seasons": 7,
   "origin_country": [
@@ -54,8 +68,8 @@
   "original_language": "en",
   "original_name": "Homeland",
   "overview": "CIA officer Carrie Mathison is tops in her field despite being bipolar, which makes her volatile and unpredictable. With the help of her long-time mentor Saul Berenson, Carrie fearlessly risks everything, including her personal well-being and even sanity, at every turn.",
-  "popularity": 36.197561,
-  "poster_path": "/lT8o38ubu9uzcjZbkDtwsVizDeQ.jpg",
+  "popularity":  33.345,
+ "poster_path": "/lT8o38ubu9uzcjZbkDtwsVizDeQ.jpg",
   "production_companies": [
     {
       "id": 4343,
@@ -171,5 +185,5 @@
   "status": "Returning Series",
   "type": "Scripted",
   "vote_average": 7.4,
-  "vote_count": 874
+  "vote_count": 885
 }

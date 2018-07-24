@@ -17,14 +17,16 @@ class HomeView extends View {
 			this.renderSearchResults(value.trim());
 		});
 	}
+	renderResults(shows) {
+		const view = new SearchResults('#search-results', Results, shows);
+		view.show();
+	}
+	getSearchResults(show) {
+		return getShows(show).then(res => res.data.results || []);
+	}
 	renderSearchResults(show) {
-		getShows(show)
-			.then((res) => {
-				const shows = res.data.results || [];
-				const view = new SearchResults('#search-results', Results, shows);
-                view.show();
-			})
-			.catch(err => console.error(err));
+		const shows = this.getSearchResults(show);
+		shows.then(res => this.renderResults(res));
 	}
 }
 
