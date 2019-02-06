@@ -1,61 +1,61 @@
-import Events from '../Events';
+import Events from "../Events";
 
 beforeEach(() => {
-	Events.events = {};
+  Events.events = {};
 });
 
-test('Events module should exist', () => {
-	expect(Events).not.toEqual({});
+test("Events module should exist", () => {
+  expect(Events).not.toEqual({});
 });
 
-test('Events module should have an events property', () => {
-	expect(Events).toHaveProperty('events');
+test("Events module should have an events property", () => {
+  expect(Events).toHaveProperty("events");
 });
 
-test('Events.on() should add an event to the events property', () => {
-	let cb = jest.fn();
-	let cb2 = jest.fn();
+test("Events.on() should add an event to the events property", () => {
+  let cb = jest.fn();
+  let cb2 = jest.fn();
 
-	Events.on('start', cb);
-	expect(Events.events).toHaveProperty('start');
-	expect(Events.events.start).toHaveLength(1);
-	expect(Events.events.start[0]).toEqual(cb);
+  Events.on("start", cb);
+  expect(Events.events).toHaveProperty("start");
+  expect(Events.events.start).toHaveLength(1);
+  expect(Events.events.start[0]).toEqual(cb);
 
-	Events.on('start', cb2);
-	expect(Events.events.start).toHaveLength(2);
-	expect(Events.events.start[1]).toEqual(cb2);
+  Events.on("start", cb2);
+  expect(Events.events.start).toHaveLength(2);
+  expect(Events.events.start[1]).toEqual(cb2);
 });
 
-test('Events.emit() should call all callbacks for specified event', () => {
-	let cb = jest.fn();
-	let cb2 = jest.fn();
+test("Events.emit() should call all callbacks for specified event", () => {
+  let cb = jest.fn();
+  let cb2 = jest.fn();
 
-	Events.on('start', cb);
-	Events.on('start', cb2);
+  Events.on("start", cb);
+  Events.on("start", cb2);
 
-	Events.emit('start');
-	expect(cb).toHaveBeenCalledTimes(1);
-	expect(cb2).toHaveBeenCalledTimes(1);
+  Events.emit("start");
+  expect(cb).toHaveBeenCalledTimes(1);
+  expect(cb2).toHaveBeenCalledTimes(1);
 });
 
-test('Events.emit(start, data) should call all callbacks for specified event and the data passed.', () => {
-	let cb = jest.fn();
-	const data = { name: 'Events' };
+test("Events.emit(start, data) should call all callbacks for specified event and the data passed.", () => {
+  let cb = jest.fn();
+  const data = { name: "Events" };
 
-	Events.on('start', cb);
+  Events.on("start", cb);
 
-	Events.emit('start', data);
-	expect(cb).toHaveBeenCalledTimes(1);
-	expect(cb).toHaveBeenCalledWith(data);
+  Events.emit("start", data);
+  expect(cb).toHaveBeenCalledTimes(1);
+  expect(cb).toHaveBeenCalledWith(data);
 });
 
-test('Events.off() should remove an event and all its callbacks', () => {
-	let cb = jest.fn();
-	let cb2 = jest.fn();
+test("Events.off() should remove an event and all its callbacks", () => {
+  let cb = jest.fn();
+  let cb2 = jest.fn();
 
-	Events.on('start', cb);
-	Events.on('start', cb2);
-	expect(Events.events.start).toHaveLength(2);
-	Events.off('start');
-	expect(Events.events).not.toHaveProperty('start');
+  Events.on("start", cb);
+  Events.on("start", cb2);
+  expect(Events.events.start).toHaveLength(2);
+  Events.off("start");
+  expect(Events.events).not.toHaveProperty("start");
 });

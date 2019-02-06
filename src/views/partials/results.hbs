@@ -2,28 +2,28 @@
 	<div class="container">
 		<div class="results__grid">
 			{{#each data}}
-				<div class="card">
-					<div class="card__left">
-						<figure class="card__image-container">
-                            {{#if poster_path}}
-							<img class="card__image" src="http://image.tmdb.org/t/p/w185{{poster_path}}" alt="Show Image">
-                            {{/if}}
-						</figure>
-					</div>
-					<div class="card__right">
-						<header class="card__header">
-							<h3 class="card__title">
-								{{name}}
-							</h3>
-						</header>
-						<div class="card__content">
-							<p class="card__description">{{overview}}</p>
-						</div>
-						<footer class="card__footer">
-							<a data-id="{{id}}" class="more-details" href="#">more details</a>
-						</footer>
-					</div>
+			<div class="card">
+				<div class="card__left">
+					<figure class="card__image-container">
+						{{#if poster_path}}
+						<img class="card__image" src="http://image.tmdb.org/t/p/w185{{poster_path}}" alt="Show Image">
+						{{/if}}
+					</figure>
 				</div>
+				<div class="card__right">
+					<header class="card__header">
+						<h3 class="card__title">
+							{{name}}
+						</h3>
+					</header>
+					<div class="card__content">
+						<p class="card__description">{{overview}}</p>
+					</div>
+					<footer class="card__footer">
+						<a data-id="{{id}}" class="more-details" href="#">more details</a>
+					</footer>
+				</div>
+			</div>
 			{{/each}}
 		</div>
 	</div>
