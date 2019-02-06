@@ -25,8 +25,7 @@ test("Controller.home() should render", () => {
   const expectedHomeTmpl = `<div class="page">
 	{{> header}}
 	{{> searchForm}}
-</div>
-`;
+</div>`;
 
   home();
 
